@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset = "utf-8">
+        <title>Homepage</title>
+        <meta name = "keywords" content = "POBLID">
+
+        
+        <!-- CSS files, my own style.css file overrides bootstrap -->
+        <link rel = "stylesheet" href = "css/bootstrap.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        
+        <!-- jQuery Library -->    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+ 
+    </head>
+    
+    <body>
+        
+        <header class = "header">
+            <div class = "main-header"> 
+                <div class="logo-block">
+                    <div class = "logo">
+                        <img src = "assets/images/homepage/LOGO.PNG"  alt="the_logo"> <!-- Logo of the website, size is responsive -->
+                    </div>
+                </div> 
+                <div class = "header-content"> <!-- Size is responsive -->
+                    <h1>THE SOCIETY FOR THE PRESERVATION OF</h1> 
+                    <h1>POLAR BEARS LIVING IN DESERT</h1>                    
+                </div>   
+                <div class ="navbar-top">
+                    <nav class="container">
+                        <!-- Top Navigation buttons -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a id=long-nav href="pbld.html">Polar Bears Living in Desert</a> <!-- its especially long so an id is given for specific css attribute -->
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+            </div>               
+                  
+        </header>
+        
+        <main class = "homepage-content">
+            <div class = "main-container">
+                <div class ="left-bar">
+                    <nav class="sidenav">
+                        <!-- Navigaton bars on the left, each triggers a navigating function -->
+                        <a href = '#' id = "homepage1" onclick = "navigateWhoWeAre()">General Information</a> 
+                        <a href = '#' id = "homepage2" onclick = "navigateNews()">Recent News</a>
+                    </nav>
+                </div>
+                <div class = "main-content-container">
+                    <div id = "homepage-content">
+
+                        <!-- Content will come here by navigating functions -->
+                                            
+                    </div> 
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class= "footer">
+                <div class ="navbar-bottom">
+                    <nav class="container">
+                        <!-- Links to all pages -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a href="pbld.html">Polar Bears Living in Desert</a>
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+            
+            
+        </footer>    
+        
+        
+        <!-- Changing the content area functions -->
+        <script>
+             function navigateWhoWeAre() {
+                  $("#homepage-content").html('<p>   The Society for The Preservation of Polar Bears Living in the Desert, or simply POBLID, was founded in 1994. </p> ' +
+                                              '<p>   The Society’s main purpose is to preserve and improve the lives of the polar bears living in desert, which is one ' +
+                                              'of the endangered animals on the planet. Another purpose of The Society is to research into the culture and history of ' +
+                                              'polar bears living in desert. The Society also organizes events in order to bring together the humans and polar bears ' +
+                                              'living in desert.</p>' +
+                                              '<p>   The Society was founded by Metin Oktay Balaban, who is also the President of the society since its foundation. ' + 
+                                              'The headquarters of the society is in Ankara, Turkey. There are four other offices of the society in Brussels, Tokyo, ' +
+                                              'New York and Algiers.</p>' +
+                                              '<img id = "who-we-are-pic" src = "assets/images/homepage/LOGO.PNG" alt = "poblid-logo">');
+             }
+        </script>
+        
+        
+        <script>
+             function navigateNews() {
+                  $("#homepage-content").html('<div id = "homepage-content">' +
+                                              '<div class = "newslist">' +
+                                              '<button href = "#" class = "btn-link" onclick = "navigateStatue()">Polar Bear Living in Desert Statue Gathers Attention<br></button>' +
+                                              '<button href = "#" class = "btn-link" onclick = "navigatePolinar()">Polinar 2021 is Completed<br></button>' +
+                                              '<button href = "#" class = "btn-link" onclick = "navigateAC()">Air Conditioners are on the Way to Sahara</button>' +
+                                              '</div>' +
+                                              '<div id = "news">' +
+                                              '</div>');
+             }
+        </script>
+        
+
+        <!-- Function to change content of the news to statue news, works very similar to functions above -->
+        <script>
+             function navigateStatue() {
+                  $("#news").html('<p> Polar Bear Living in Desert Statue, which is located on Western Sahara, keeps gathering the attention of tourists.</p>' +
+                                  '<p> According to the officials, since its built in 2018, more than a hundred thousand tourist visited the statue.</p>' +
+                                  '<p> The statue was built by the artists Don Kennell and Lisa Adler. It is also one of the main locations of PoliTours which is' + 
+                                  'held every year</p>' +
+                                  '<!-- This part is taken from youtube directly -->' +
+                                  '<iframe width="560" height="315" src="https://www.youtube.com/embed/1xKWnrCOfhs" title="YouTube video player" frameborder="0"' +
+                                  'allow="accelerometer;' +
+                                  'autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"');
+             }
+        </script>
+        
+                <!-- Function to change content of the news to polinar news, works very similar to functions above -->
+        <script>
+             function navigatePolinar() {
+                  $("#news").html('<p> Polinar 2021, the biggest seminar about polar bears living in desert was again hold this year on 21-23 August, in London.</p>' +
+                                  '<p> Researchers, academicians, politicans and many other people came together to discuss about the future of polar ' +
+                                  'bears living in desert. The main topic of the seminar was "Polar Bears in Desert and Space Mining". </p>' +
+                                  '<p>The full report of the seminar will be available in 2 months.</p>' +
+                                  '<img id = "polinar-photo" src = "assets/images/Photogallery/seminar1.jpg" alt = "polinar-photo">');
+             }
+        </script>
+        
+        <script>
+             function navigateAC() {
+                  $("#news").html('<p> Last week, another charity project of POBLID has come to life. 50 Air conditioners have been sent to Sahara desert in order ' +
+                                  'to ease the lives of our fellow polar bear friends. <p>' +
+                                  '<p> The air conditioners are able to charge by solar energy, as our fellow friends live without any other energy resource in desert.' +
+                                  '<p>The air conditioners are going to be received by the chieftains of 3 different pacts of polar bears living in desert.' + 
+                                  'Along with air conditioners, 200 kilograms of ice cream and 500 liters of coca-cola is sent to the pacts.</p>' +
+                                  '<img id = "ac-photo" src = "assets/images/AC.jpg" alt = "ac-photo">');
+             }
+        </script>
+        
+    </body>
+
+
+</html>    
+    
+        

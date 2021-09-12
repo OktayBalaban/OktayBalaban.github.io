@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset = "utf-8">
+        <title>contact</title>
+        <meta name = "keywords" content = "POBLID">
+
+        
+        <!-- CSS files, my own style.css file overrides bootstrap -->
+        <link rel = "stylesheet" href = "css/bootstrap.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        
+        <!-- jQuery Library -->    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+ 
+    </head>
+    
+    <body>
+        
+        <header class = "header">
+            <div class = "main-header"> 
+                <div class="logo-block">
+                    <div class = "logo">
+                        <img src = "assets/images/homepage/LOGO.PNG"  alt="the_logo"> <!-- Logo of the website, size is responsive -->
+                    </div>
+                </div> 
+                <div class = "header-content"> <!-- Size is responsive -->
+                    <h1>THE SOCIETY FOR THE PRESERVATION OF</h1> 
+                    <h1>POLAR BEARS LIVING IN DESERT</h1>                   
+                </div>   
+                <div class ="navbar-top">
+                    <nav class="container">
+                        <!-- Top Navigation buttons -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a id=long-nav href="pbld.html">Polar Bears Living in Desert</a> <!-- its especially long so an id is given for specific css attribute -->
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+            </div>               
+                  
+        </header>
+        
+        <main class = "contact-content">
+            <div class = "main-container">
+                <div class ="left-bar">
+                    <nav class="sidenav">
+                        <!-- Navigaton bars on the left, each triggers a navigating function -->
+                        <a href = '#' id = "contact1" onclick = "navigateConInfo()">Contact Info</a> 
+                        <a href = '#' id = "contact2" onclick = "navigateDonation()">Donation</a>
+                    </nav>
+                </div>
+                <div class = "main-content-container">
+                    <div id = "contact-content">
+                        
+                        <!-- This part will be filled by content change functions -->
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class= "footer">
+                <div class ="navbar-bottom">
+                    <nav class="container">
+                        <!-- Links to all pages -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a href="pbld.html">Polar Bears Living in Desert</a>
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+            
+            
+        </footer>   
+        
+        
+        
+        <!-- Changing the content area functions -->
+        
+        <!-- Navigate into Contact Address -->
+        <script>
+             function navigateConInfo() {
+                  $("#contact-content").html('' +
+                        '<div class = "contact-address">' +
+                            '<p class = "contact-head">Ankara</p>' +
+                            '<div class = "detailed-contact">' +
+                                '<p class = "contact-head-2">E-mail: </p>' +
+                                '<p class = "mail-or-phone">ankara@poblid.com</p>' +
+                                '<p class = "contact-head-2">Phone: </p>' +
+                                '<p class = "mail-or-phone">+90 123 456 789</p>' +
+                            '</div>' + 
+                            '<p class = "contact-head">Brussels</p>' +
+                            '<div class = "detailed-contact">' +
+                                '<p class = "contact-head-2">E-mail: </p>' +
+                                '<p class = "mail-or-phone">brussels@poblid.com</p>' +
+                                '<p class = "contact-head-2">Phone: </p>' +
+                                '<p class = "mail-or-phone">+32 123 456 789</p>' +
+                            '</div>' +
+                            '<p class = "contact-head">New York</p>' +
+                            '<div class = "detailed-contact">' +
+                                '<p class = "contact-head-2">E-mail: </p>' + 
+                                '<p class = "mail-or-phone">newyork@poblid.com</p>' +
+                                '<p class = "contact-head-2">Phone: </p>' +
+                                '<p class = "mail-or-phone">+1 123 456 789</p>' +
+                            '</div> ' +
+                            '<p class = "contact-head">Tokyo</p> ' +
+                            '<div class = "detailed-contact">' +
+                                '<p class = "contact-head-2">E-mail: </p>' +
+                                '<p class = "mail-or-phone">tokyo@poblid.com</p>' +
+                                '<p class = "contact-head-2">Phone: </p>' +
+                                '<p class = "mail-or-phone">+81 123 456 789</p>' +
+                            '</div>' +
+                            '<p class = "contact-head">Algiers</p>' +
+                            '<div class = "detailed-contact">' +
+                                '<p class = "contact-head-2">E-mail: </p>' +
+                                '<p class = "mail-or-phone">algiers@poblid.com</p>' +
+                                '<p class = "contact-head-2">Phone: </p>' +
+                                '<p class = "mail-or-phone">+213 123 456 789</p>' +
+                            '</div>' +                           
+                      '</div>');
+             }
+        </script>
+        
+        <!-- Navigate into Donation Address -->
+        <script>
+             function navigateDonation() {
+                  $("#contact-content").html("<h1>Polar Bears Living in Desert Are So Lonely</h1>" +
+                                             "<h2>You can donate money and help our fellow friends</h2>" +
+                                             "<div id = 'donateDiv'" +
+                                                 "<button type='button' class='btn btn-primary'  onclick = 'donateBtn()'>Donate</button>" + //Button activates alert message
+                                             "</div>");
+             }
+        </script>
+        
+        
+        
+        
+        <!-- Alert function in order to tell donation is temporarily(!) disabled -->
+        <script>
+            function donateBtn() {
+                alert("Donations through the website is temporarily disabled due to security measures");
+            }
+        </script>
+        
+    </body>
+
+
+</html>    
+    
+    

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset = "utf-8">
+        <title>social</title>
+        <meta name = "keywords" content = "POBLID">
+
+        
+        <!-- CSS files, my own style.css file overrides bootstrap -->
+        <link rel = "stylesheet" href = "css/bootstrap.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        
+        <!-- jQuery Library -->    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>    
+
+ 
+    </head>
+    
+    <body>
+        
+        <header class = "header">
+            <div class = "main-header"> 
+                <div class="logo-block">
+                    <div class = "logo">
+                        <img src = "assets/images/homepage/LOGO.PNG"  alt="the_logo"> <!-- Logo of the website, size is responsive -->
+                    </div>
+                </div> 
+                <div class = "header-content"> <!-- Size is responsive -->
+                    <h1>THE SOCIETY FOR THE PRESERVATION OF</h1> 
+                    <h1>POLAR BEARS LIVING IN DESERT</h1>                   
+                </div>   
+                <div class ="navbar-top">
+                    <nav class="container">
+                        <!-- Top Navigation buttons -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a id=long-nav href="pbld.html">Polar Bears Living in Desert</a> <!-- its especially long so an id is given for specific css attribute -->
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+            </div>               
+                  
+        </header>
+        
+        <main class = "social-content">
+            <div class = "main-container">
+                <div class ="left-bar">
+                    
+                    <nav class="sidenav">
+                        <!-- Navigaton bars on the left, each triggers a navigating function -->
+                        <a href = '#' id = "social1" onclick = "navigateMessage()">Leave a Message</a> 
+                        <a href = '#' id = "social2" onclick = "navigateGallery()">Photogallery</a>
+                    </nav>
+  
+                </div>
+                <div class = "main-content-container">
+                    <div id = "social-content">
+                        
+                        <!-- Content will come here by navigating functions -->
+ 
+                    </div>
+                </div>    
+            </div>
+
+        </main>
+        
+        <footer class= "footer">
+                <div class ="navbar-bottom">
+                    <nav class="container">
+                        <!-- Links to all pages -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a href="pbld.html">Polar Bears Living in Desert</a>
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+        </footer>   
+        
+        
+        
+        
+        <!-- Changing the content area functions -->
+        <script>
+            function navigateMessage() {
+                $("#social-content").html('<div id = "message-block">' +
+                                          '<textarea id = nameBox type="text" >Your Name</textarea>' +
+                                          '<textarea id = messageBox type="text" >Your Message</textarea>' +
+                                          '<button id = msgButton type="button" class="btn btn-secondary" onclick =addMessage()>Submit</button>' +
+                                          '</div>' +
+                                          '<div id = "messageArea"></div>');
+            }
+        </script>
+        
+        <script>
+            function navigateGallery() {
+                $("#social-content").html('<div class = "photo-selector-block">' +
+                            
+                                              '<!-- images runs populateImage function on click to decide which images will be shown on the carousel -->' +
+                            
+                                              '<img id = "polar-select" src = "assets/images/Photogallery/polarSelector.jpg" onclick = "showImage('+"'polar'"+', 0)">' +
+                                              '<img id = "poli-select" src = "assets/images/Photogallery/poliTourSelector.jpg" onclick = "showImage('+"'poliTour'"+', 0)">' +
+                                              '<img id = "seminar-select" src = "assets/images/Photogallery/seminarSelector.jpg" onclick = "showImage('+"'seminar'"+', 0)">' + 
+                                         '</div>' + 
+                        
+                                         '<div class = "photo-carousel-block">' +
+                                             '<button id = "left-button" type="button" class="btn btn-secondary" onclick ="previousImage()">Previous</button>' +
+                                             '<!-- have function to change picture -->' +
+                                             
+                                             '<div id = "selected-photo-block">' +
+                                                  '<img id = "selected-photo" src = "assets/images/Photogallery/blank.bmp"  alt="selected-photo">' +
+                                             '</div>' +
+                                              
+                                             '<button id = "right-button" type="button" class="btn btn-secondary" onclick ="nextImage()">Next</button>' +
+                                             '<!-- have function to change picture -->' +
+                                
+                                         '</div>');
+            }
+        </script>
+        
+        
+        
+        <!-- Adding a Message -->
+        <!-- It works like a forum, free to write anything. However, as there is no back-end, everything written gets deleted after refreshing the page -->
+        
+        <script>
+            function addMessage() {
+                var theName = $("#nameBox").val(); 
+                var theNameTrimmed = $.trim(theName)  //will use it to check if the input is empty
+                
+                var theMessage = $("#messageBox").val();
+                var theMessageTrimmed = $.trim(theMessage);  //will use it to check if the input is empty
+                
+                //Checks if the user entered his name, if not, it alerts and breaks
+                if ( (theNameTrimmed == "Your Name") || (theNameTrimmed.length == 0) ) {
+                    alert("You didn't enter your name");
+                }
+                
+                //Checks if the user entered his message, if not, it alerts and breaks
+                else if ( (theMessageTrimmed == "Your Message") || (theMessageTrimmed.length == 0) ) {
+                    alert("You didn't enter your message");
+                }
+                
+                //If there is no problem, it adds the message
+                else {
+                    $("#messageArea").append("<a style = 'font-weight: bold;'>" + theName + ": </a><br>");
+                    $("#messageArea").append(theMessage + "<br>");
+                    $("#messageArea").append(" <br>");
+                }
+            }    
+           
+        </script>
+        
+        <!-- Image Carousel Controlling Function -->
+        <script>
+            
+            var PhotoCounter = 0; //Global Counter
+            var imgGroup = 'blank'; //Global variable, will change by showImage function
+            
+            function showImage(ImageGroup){ //Gets the input from the HTML code, counter is 0 by default
+                
+                imgGroup = ImageGroup;
+                
+                //Showing the image by changing HTML. Input name + counter controls the image name.
+                $("#selected-photo-block").html('<img id ="selected-photo" src = "assets/images/Photogallery/' + imgGroup + PhotoCounter + '.jpg" alt="selected-photo"> ')
+                
+                
+            }
+                
+        </script>          
+        
+        <script>
+            
+            //Moves to the next photo by increasing the counter. If the counter is 2, then go the beginning by setting the counter 0.
+            function nextImage() {
+                
+                //If no photo group is selected yet, then breaks and does nothing
+                if (imgGroup == 'blank'){
+                    return
+                }
+                
+                if (PhotoCounter == 2) {
+                    PhotoCounter = 0;
+                }
+                else {
+                    PhotoCounter++
+                }
+                
+                //Showing the image by changing HTML. imgGroup + counter controls the image name.
+                $("#selected-photo-block").html('<img id ="selected-photo" src = "assets/images/Photogallery/' + imgGroup + PhotoCounter + '.jpg" alt="selected-photo"> ')
+            }
+        </script>     
+        
+        <script>
+            
+                //Moves to the previous photo by decreasing the counter. If the counter is 0, then go the end by setting the counter 2.
+            function previousImage() {
+                
+                //If no photo group is selected yet, then breaks and does nothing
+                if (imgGroup == 'blank'){
+                    return
+                }
+                
+                if (PhotoCounter == 0) {
+                    PhotoCounter = 2;
+                }
+                else {
+                    PhotoCounter--
+                }
+                
+                //Showing the image by changing HTML. imgGroup + counter controls the image name.
+                $("#selected-photo-block").html('<img id ="selected-photo" src = "assets/images/Photogallery/' + imgGroup + PhotoCounter + '.jpg" alt="selected-photo"> ')
+            }    
+        </script>    
+             
+        
+    </body>
+
+
+</html>    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset = "utf-8">
+        <title>events</title>
+        <meta name = "keywords" content = "POBLID">
+
+        
+        <!-- CSS files, my own style.css file overrides bootstrap -->
+        <link rel = "stylesheet" href = "css/bootstrap.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        
+        <!-- jQuery Library -->    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+        
+    </head>
+    
+    <body>
+        
+        <header class = "header">
+            <div class = "main-header"> 
+                <div class="logo-block">
+                    <div class = "logo">
+                        <img src = "assets/images/homepage/LOGO.PNG"  alt="the_logo"> <!-- Logo of the website, size is responsive -->
+                    </div>
+                </div> 
+                <div class = "header-content"> <!-- Size is responsive -->
+                    <h1>THE SOCIETY FOR THE PRESERVATION OF</h1> 
+                    <h1>POLAR BEARS LIVING IN DESERT</h1>                   
+                </div>   
+                <div class ="navbar-top">
+                    <nav class="container">
+                        <!-- Top Navigation buttons -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a id=long-nav href="pbld.html">Polar Bears Living in Desert</a> <!-- its especially long so an id is given for specific css attribute -->
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+            </div>               
+                  
+        </header>
+        
+        <main class = "events-content">
+            <div class = "main-container">
+                <div class ="left-bar">
+                    <nav class="sidenav">
+                        <!-- Navigaton bars on the left, each triggers a navigating function -->
+                        <a href = '#' id = "events1" onclick = "navigatePolitours()">PoliTours</a> 
+                        <a href = '#' id = "events2" onclick = "navigateSeminars()">Seminars</a>
+                    </nav>
+                </div>
+                <div class = "main-content-container">
+                    <div id = "event-content">
+ 
+                        <!-- Content will come here by navigating functions -->
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class= "footer">
+                <div class ="navbar-bottom">
+                    <nav class="container">
+                        <!-- Links to all pages -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a href="pbld.html">Polar Bears Living in Desert</a>
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+            
+            
+        </footer> 
+        
+        <!-- Changing the content area functions -->
+        <script>
+             function navigatePolitours() {
+                  $("#event-content").html('' +
+                                     '<p>PoliTours are the biggest events organized by POBLID. Every year, 200 people meets with polar bears living in desert and ' + 
+                                     'enter the new year together.</p>' +
+                                     '<p>The main purpose of the poliTours is to bring together humans and polar bears living in desert together by several activities ' + 
+                                     'throughout a whole week chain of events.</p>' +
+                                     '<p>If you wish to get more information about the events, you can contact with the closest POBLID office to you.</p>' +
+                                     '<p>This year, PoliTour will take place between 27 December 2021 - 2 January 2022. You can check the latest PoliTour ' +
+                                     'teaser below:</p>' +
+                                     '<!-- The poliTour Video -->' +
+                                     '<video id = "poliTourVideo" width= "480" height="360" controls preload = "auto"> ' +
+                                         '<source src="assets/videos/politour.mp4" type="video/mp4"> ' +
+                                     '<!-- If the browser does not support the video, this message will be shown -->' +
+                                     'The video can not be played ' +
+                                     '</video>');
+                  
+             }
+        </script>
+        
+        <script>
+             function navigateSeminars() {
+                  $("#event-content").html(' ' +
+                                           '<p> One of the biggest activity areas of POBLID is to hold regular seminars.</p>' +
+                                           '<p> The seminars may take several shapes. Every office of POBLID organizes regular seminars every year in their hometown. ' +
+                                           'Also, a big seminar, "Polinar", is being held every year in a different city of the world.</p>' +
+                                           '<p> There are also other seminars organized by the partnerships whenever a chance occurs. These seminars generally take place by ' + 'the partnerships of other NGOs or universities. If you would like to invite us for an organisation, you can always ' + 
+                                           'contact us.</p>' +
+                                           '<img id = "seminars-pic" src = "assets/images/Photogallery/seminar0.jpg">');
+             }
+        </script>
+        
+
+        
+    </body>
+
+
+</html>    
+    
+      

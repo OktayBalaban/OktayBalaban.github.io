@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+    <head>
+        <meta charset = "utf-8">
+        <title>pbld</title>
+        <meta name = "keywords" content = "POBLID">
+
+        
+        <!-- CSS files, my own style.css file overrides bootstrap -->
+        <link rel = "stylesheet" href = "css/bootstrap.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        
+        <!-- jQuery Library -->    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+ 
+    </head>
+    
+    <body>
+        
+        <header class = "header">
+            <div class = "main-header"> 
+                <div class="logo-block">
+                    <div class = "logo">
+                        <img src = "assets/images/homepage/LOGO.PNG"  alt="the_logo"> <!-- Logo of the website, size is responsive -->
+                    </div>
+                </div> 
+                <div class = "header-content"> <!-- Size is responsive -->
+                    <h1>THE SOCIETY FOR THE PRESERVATION OF</h1> 
+                    <h1>POLAR BEARS LIVING IN DESERT </h1>                   
+                </div>   
+                <div class ="navbar-top">
+                    <nav class="container">
+                        <!-- Top Navigation buttons -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a id=long-nav href="pbld.html">Polar Bears Living in Desert</a> <!-- its especially long so an id is given for specific css attribute -->
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+            </div>               
+                  
+        </header>
+        
+        <main class = "pbld-content">
+            <div class = "main-container">
+                <div class ="left-bar">
+                    <nav class="sidenav">
+                        <!-- Navigaton bars on the left, each triggers a navigating function -->
+                        <a href = '#' id = "culture1" onclick = "navigateGeneral()">General Information</a> 
+                        <a href = '#' id = "culture2" onclick = "navigateCulture()">Culture and Lifestyle</a>
+                        <a href = '#' id = "culture3" onclick = "navigateReligion()">Religion</a>
+                    </nav>
+                </div>
+                <div class = "main-content-container">
+                    <div id = "pbld-content">
+
+                    <!-- Content comes here by the navigating functions -->
+                        
+                    </div> 
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class= "footer">
+                <div class ="navbar-bottom">
+                    <nav class="container">
+                        <!-- Links to all pages -->
+                        <a href="index.html">Who We Are</a>
+                        <a href="social.html">Social</a>
+                        <a href="pbld.html">Polar Bears Living in Desert</a>
+                        <a href="events.html">Events</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                </div>
+            
+            
+        </footer>   
+        
+        <!-- Changing the content area functions -->
+        <script>
+             function navigateGeneral() {
+                  $("#pbld-content").html('<p> Polar Bears Living in Desert (shortly PBLD), is a subspecies of polar bears which have habitats in deserts rather ' +
+                                          'than cold arctic areas. Their latin name ‘Ursus Desertus’ means desert bear. The living areas of PBLD can be found in Western and Central Sahara Desert. </p>' +
+                                          '<p> Historically, first PBLD tribes reached the Sahara Desert during the Migration Age around 300 to 250 AD. How and why they came to the desert is still a mystery today. </p>' +
+                                          '<img id = "Sahara" src = "assets/images/PBLD/General/Sahara.jpg" alt = "sahara"> ' +
+                                          '<p> As very intelligent and social animals, PBLD lives among different tribes. There are 14 known tribes, 3 of them are much larger than the other 11. There are also PBLD living alone, generally due to having been exiled from their tribes. A chieftain is the leader of the tribes.</p>' +
+                                          '<p>PBLD has their own culture and folklore. They have a politheist religion, based on myths. They are also very friendly animals. Being monogamous animals, they even have a primitive version of marriage. Marriages between tribes are common in order to build friendships.</p> ' +
+                                          '<img id = "PBLD-photo" src = "assets/images/Photogallery/polar0.jpg" alt = "polar-bear-in-desert">');
+             }
+        </script>
+        
+        <script>
+             function navigateCulture() {
+                  $("#pbld-content").html('<p>PBLD are very social and intelligent animals. Throughout the years, they have built social and administrative rules, ' +                                 'folklore, laws, music and even religion.</p>' +
+                                          '<p>PBLD lives in tribes. Each tribe is ruled by a chieftain, generally the wisest and the most charismatic of the tribe. There are also the ‘elders’, the ones who elect the chieftain. The ‘elders’ are the oldest bears, naturally get selected by their tribe by complex social norms. The chieftain rules by the power it gained from the elders. If elders get dissatisfied, they change the chieftain. The chieftain can be either male or female.</p>' +
+                                          '<p>PBLD tribes live as nomadic tribes. The chieftain decides where to lead the PBLD and when to stay still. </p> ' +
+                                          '<p>PBLD are monogamous animals. Both male and female PBLD get ‘married’ by a certain ritual. After the ritual is complete, they are bound together. PBLD believes this bond is eternal, and will continue in the afterlife. </p> ' +
+                                          '<p>There are unwritten laws in tribes. As PBLD lives as nomadic creatures and do not have any possession, the laws and rules are not many. There are two different punishments; getting bitten by another PBLD and exile. Getting bitten generally happens for minor offenses, such as showing laziness. Getting exile happens due to more violent offenses, such as fighting.</p> ' +
+                                          '<p>PBLD eats the animals they hunt in the desert. They also eat vegetables they can find. Like other polar bears in the arctic,  they also like drinking Coca Cola.</p> ' + 
+                                          '<img id = "coca-cola" src = "assets/images/PBLD/Culture/Coca-cola.jpg" alt = "coca-cola">');
+             }
+        </script>
+        
+        <script>
+             function navigateReligion() {
+                  $("#pbld-content").html('<p>Polar Bears Living in Desert has polytheist beliefs. 5 godly ‘Bears’, living in Mount Polympus, are the creators and rulers of' +
+                                          'all bears. In their religion, Voli, The Bear of Thunder, is the strongest and the ruler of all bears. As Voli is also a ' +
+                                          'polar bear, PBLD thinks they are also the direct children of Voli and therefore have a more privileged place among all the bears.</p>' +
+                                          '<p> Click the pictures below to learn more about the Bears of Polympus.</p>' +
+                                          
+                                          '<div id = "pantheon">' +
+                                              '<img src = "assets/images/PBLD/Religion/Winnie.jpg" onclick = "selectWinnie()" alt = "Winnie">' +
+                                              '<img src = "assets/images/PBLD/Religion/Chen.jpg" onclick = "selectChen()" alt = "Chen">' +
+                                              '<img src = "assets/images/PBLD/Religion/Voli.PNG" onclick = "selectVoli()"  alt = "Voli">' +
+                                              '<img src = "assets/images/PBLD/Religion/Snorlax.jpeg" onclick = "selectSnorlax()" alt = "Snorlax">' + 
+                                              '<img src = "assets/images/PBLD/Religion/Yogi.png" onclick = "selectYogi()" alt = "Yogi">' +
+                        
+                                          '</div>' +
+                        
+                                          '<div id = "pantheon-selected">' +
+   
+                                          '<!-- Place to have Bear Select Functions -->' +
+                        
+                                          '</div>');
+             }
+        </script>
+        
+        <!-- Pantheon Navigation Functions. When a bear is clicked, the info comes -->
+        
+        <!-- Function to bring Voli -->
+        <script>
+             function selectVoli() {
+                  $("#pantheon-selected").html('<img src = "assets/images/PBLD/Religion/Voli.PNG" alt = "Voli"> ' + 
+                                               '<h1> Voli - The Bear of Thunder </h1>' +
+                                               '<p>Voli, The Bear of Thunder is also the ruler of all the skies and Mount Polympus. He is the strongest of all the bears and also called the “Bearfather”.</p>' +
+                                               '<p>Voli spends most of the time in his throne at the top of the Mount Polympus, where he gazes upon all the bears from there.</p>' +
+                                               '<p>As Voli is also a polar bear, all polar bears, including The Polar Bears Living in Desert, think they are superior to other bears.</p>');
+             }
+        </script>
+        
+        <!-- Function to bring Winnie -->
+        <script>
+             function selectWinnie() {
+                  $("#pantheon-selected").html('<img src = "assets/images/PBLD/Religion/Winnie.jpg" alt = "Winnie"> ' + 
+                                               '<h1> Winnie - The Bear of Love and Friendship </h1>' +
+                                               '<p>Winnie, The Bear of Love and Friendship, responsible for the communication and bonds between the bears.</p>' +
+                                               '<p>He has a very fun-loving character and always wants bears to live in harmony. Many bears dedicate festivities in Winnie’s name.</p>');
+             }
+        </script>
+        
+        <!-- Function to bring Chen -->
+        <script>
+             function selectChen() {
+                  $("#pantheon-selected").html('<img src = "assets/images/PBLD/Religion/Chen.jpg" alt = "Chen"> ' + 
+                                               '<h1> Chen - The Bear of Wisdom </h1>' +
+                                               '<p>Chen, The Bear of Wisdom, The Bear of Enlightenment and also The Bear of Peace, is a panda. He is the most intelligent bear among all the bears and also the most trusted advisor of Volibear.</p>' +
+                                               '<p>Chen is mostly admired by the bears living in Eastern Asia, thinking he is actually the one who deserves to be the ruler rather than Voli. Even though many bears think the same way, Chen, having a very peaceful and reserved nature, never wanted the place of the ruler for himself.</p>');
+             }
+        </script>
+        
+        <!-- Function to bring Snorlax -->
+        <script>
+             function selectSnorlax() {
+                  $("#pantheon-selected").html('<img src = "assets/images/PBLD/Religion/Snorlax.jpeg" alt = "Snorlax"> ' + 
+                                               '<h1> Snorlax - The Bear of Dreams </h1>' +
+                                               '<p>Snorlax, The Bear of Dreams, is also the ruler of "Afterlife". In Bear Religion, dreams are a passage to the afterlife. Death is also a form of eternal sleep, where a soul of a bear moves to the domain of Snorlax .</p>' +
+                                               '<p>Snorlax spends most of his time sleeping and dreaming in his palace. He is a very reserved bear and very little is known about him, as he does not like to communicate with the living much.</p>');
+             }
+        </script>
+        
+         <!-- Function to bring Yogi -->
+        <script>
+             function selectYogi() {
+                  $("#pantheon-selected").html('<img src = "assets/images/PBLD/Religion/Yogi.png" alt = "Yogi"> ' + 
+                                               '<h1> Yogi - The Bear of Nature </h1>' +
+                                               '<p>Yogi, The Bear of Nature is responsible from the forests and green. He is also the brother of Voli.</p>' +
+                                               '<p>Even though Yogi is one of the most popular Bears of Polympus, there happens to be disagreements and competition between him and Voli from time to time. Voli likes ice and cold, therefore he doesn’t let Yogi to spread green to the arctic and wants his children polar bears not to live in Yogi’s domain.</p>'+
+                                               '<p>Polar Bears Living in Desert believe they started to live in the desert due to a disagreement between Voli and Yogi. One day, Yogi stated that Voli limits polar bears to live in the cold. In an answer to that, Voli sent some of his children to live in the desert, which resulted in the birth of The Polar Bears Living in Desert.');
+             }
+        </script>
+         
+        
+    </body>
+
+
+</html>
+
+
+    
+     

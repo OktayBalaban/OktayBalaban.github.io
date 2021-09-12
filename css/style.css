@@ -1,0 +1,474 @@
+body {
+    background-color: white;
+    overflow: scroll;
+}
+
+
+/*  Top Header CSS */
+
+.logo img{
+    float: left;
+    margin-top: 5px;
+    width: 120px;
+    height: 105px;
+}
+
+.main-header{
+    display: block;
+    height: 8%;
+    background-color: rgb(250, 252, 161) /* Same with logo sky colour */;    
+}
+
+
+.main-header h1{
+    text-align: center;
+    font-family: "Brush Script MT", cursive;
+    font-weight: bold;
+    color: chocolate;
+}
+
+/* Prevents collapsation of texts under the logo by making them smaller */
+@media screen and (max-width: 1100px) {
+    .main-header h1{
+        text-align: center;
+        font-size : 1em; /* Gets smaller */
+        font-family: "Brush Script MT", cursive;
+        font-weight: bold;
+        color: chocolate;
+    }
+    
+    .logo img{
+        float: left;
+        margin-top: 5px;
+        width: 60px; /*Gets smaller */
+        height: 49px; /*Gets smaller */
+    }
+}
+
+/*  Top Menu Buttons CSS */
+
+.navbar-top {
+    display: block;
+    font-size: 15px;
+    background-color: crimson;
+    width: 100%;
+    
+}
+
+
+
+.navbar-top a {
+    margin: 0px;
+    padding: 15px 0px;
+    text-align: center;
+    font-style: bold;
+    color: white;
+    background-color: crimson;
+    display: inline-block;    
+    width: 18%;
+    text-decoration:none;
+    flex-direction:row
+}
+
+/* Having an hovering animation to have a better user experience */
+.navbar-top a:hover {
+    background-color: lightcoral;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+
+#long-nav {
+    width: 200px
+}
+
+/* Prevents collapsation of top navigation bars */
+@media screen and (max-width: 1100px) {
+
+    .navbar-top a { 
+        margin: 0px;
+        /* Padding removed */
+        text-align: center;
+        font-size: 0.6em; /* Gets smaller */
+        font-style: bold;
+        color: white;
+        background-color: crimson;
+        display: inline-block;    
+        width: 14%; /* Gets smaller */
+        text-decoration:none;
+        flex-direction:row
+    }
+    
+    #long-nav {
+        width: 150px; /* Gets smaller */
+    }
+
+}
+
+/*  Footer CSS */
+
+footer {
+    background-color: crimson;
+    width: 100%;
+    align-self: bottom;
+    display: block;
+    font-size: 10px;
+    vertical-align: top;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+    height: 100px;
+    position: relative;
+    bottom:0;
+    margin-top: 250px;
+}
+
+.navbar-bottom a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}  
+
+/*  Left Navigations CSS */
+
+.left-bar {
+    display: block;
+    margin-top: 50px;
+    font-size: 15px;
+    background-color: white;
+    width: 19%;
+    float: left;
+    
+       
+}
+
+
+.left-bar .sidenav a{
+    padding: 15px 0px;
+    margin-left: 1%;
+    margin-bottom: 5px;
+    text-align: center;
+    font-style: bold;
+    color: white;
+    background-color: crimson;
+    display: block;
+    flex-direction:row;
+    border-radius: 5px;
+    text-decoration: none;
+    
+}
+
+/* Having an hovering animation to have a better user experience */
+.left-bar .sidenav a:hover {
+    background-color: lightcoral;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+
+
+/*  Main Content CSS */
+
+
+.main-container{
+    width: 99%;
+    display: inline-block;
+}
+
+.main-content-container{
+    width: 80%;
+    float: right;
+    margin-top: 50px;
+}
+
+/* Leave a Message CSS */
+
+#message-block {
+    
+    display: block;
+    position: relative;
+    top: -30px ;
+}
+
+#nameBox {
+    
+    width: 150px;
+    padding: 10px 10px;
+    line-height:70%;
+}
+
+#messageBox {
+    
+    width: 100%;
+    padding:15px 10px;
+    line-height:140%;
+}
+
+/* Who We Are CSS */
+
+#who-we-are-pic {
+    
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+    
+}
+
+/* Recent News CSS */
+
+.newslist {
+    
+    display: block;
+    margin-right: 150px;
+    width: 100%;
+    text-decoration: none;
+    
+}
+
+.newslist button {
+    
+    text-decoration: none;
+    width: 400px;
+    background-color: crimson; /* Same with other buttons */
+    border: 1%;
+    border-color: white;
+    color: white;
+}
+
+.newslist button:hover {
+    
+    text-decoration: none;
+    width: 400px;
+    background-color: lightcoral; /* Same with other buttons */
+    border: 0;
+    color: white;
+}
+
+#news {
+    
+    margin-top: 15px;
+}
+
+/* Photogallery CSS */
+
+
+
+.photo-selector-block {
+    
+    display: inline-block;
+    
+}
+
+.photo-selector-block img {
+    
+    margin-left: 10%;
+    width: 10%;
+    height: 15%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+    cursor: pointer;
+}
+
+.photo-carousel-block {
+    
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 20% 500px 20%; /* Getting it centered by a fixed size, it gets smaller responsively */
+    width: 100%;
+}
+
+/* Prevents oversizing of the photo showing block by making it smaller */
+@media screen and (max-width: 1100px) {
+    .photo-carousel-block {
+        margin-top: 2%;
+        display: grid;
+        grid-template-columns: 20% 300px 20%; /* Gets Smaller */
+        width: 100%;
+    }
+
+}
+
+/* Prevents oversizing of the photo showing block by making it smaller */
+@media screen and (max-width: 700px) {
+    .photo-carousel-block {
+        margin-top: 2%;
+        display: grid;
+        grid-template-columns: 20% 200px 20%; /* Gets Smaller */ 
+        width: 100%;
+    }
+
+}
+
+/* Previous button */
+#left-button {
+    
+    margin-top: 50%;
+    height: 45px;
+    display: inline-block;  
+}
+
+/* Next button */
+#right-button {
+    
+    margin-top: 50%;
+    height: 45px;
+    display: inline-block; 
+}
+
+
+/* Photo that is selected to be shown */
+#selected-photo {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+}
+
+/* PBLD General Part CSS */
+
+#Sahara {
+    
+    margin-left: 30%; /* Getting it centered */
+    margin-right: 30%;    
+    width : 40%;
+}
+
+#PBLD-photo {
+    
+    margin-left: 30%; /* Getting it centered */
+    margin-right: 30%;    
+    width : 40%;
+}
+
+/* Culture CSS */
+
+#coca-cola {
+    
+    margin-left: 30%; /* Getting it centered */
+    margin-right: 30%;    
+    width : 40%;
+}
+
+/* Religion CSS */
+
+#pantheon {
+    
+    display: inline-block;
+
+}
+
+#pantheon img{
+    
+    cursor: pointer; /* To show the img is clickable */
+    margin-left: 5%;
+    width: 14%; /* Only using width in order to have reflective pictures */
+    border-radius: 10px; /* To have a more aesthetic pictures */
+
+}
+
+#pantheon-selected img{
+    
+    margin-right: 35%; /* Getting it centered */
+    margin-left: 35%;
+    margin-top: 20px;
+    width: 30%; /* Only using width in order to have reflective pictures */
+    border-radius: 10px; /* To have a more aesthetic pictures */
+
+}
+
+#pantheon-selected h1{
+    
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+#pantheon-selected p{
+    
+    text-align: left;
+    margin-top: 20px; 
+    margin-right: 15%; /* Getting it centered */
+    margin-left: 15%;
+
+}
+
+/* PoliTours CSS */
+
+#poliTourVideo {  /*Center the video */
+    
+    display : block;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+/* Seminars CSS */
+
+#seminars-pic {
+    
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+    
+}
+
+/* Contact CSS */
+
+.contact-address {
+    margin-left: 5%;
+}
+
+.detailed-contact {
+    
+    margin-top = 5%;
+    display: grid;
+    grid-template-columns: 100px 500px;
+}
+
+.contact-head{
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;    
+}
+
+.contact-head-2{
+    font-weight: bold;
+    font-size: 20px;    
+}
+
+.mail-or-phone{
+    margin-left: auto
+    text-align: left;
+    font-size: 20px;    
+}
+
+/* Donation Page CSS */
+
+#contact-content h1{
+    margin-top: 5%;
+    text-align: center;
+}
+
+#contact-content h2{
+    font-size: 1.2em; 
+    text-align: center;
+}
+
+#donateDiv {
+    display: block;
+    margin-top: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    min-width: 120px;
+    text-align: center;
+    font-size: 30px;
+}
+
